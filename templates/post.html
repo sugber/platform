@@ -1,0 +1,20 @@
+{#<p>{{ aaa }}</p>#}
+{#<p>{{ aaa.1 }}</p>#}
+{#<p>{{ aaa.1.casename }}</p>#}
+{#var val = {{ aaa|length }}#}
+{#{% for foo in aaa %}#}
+{#    <div>{{forloop.counter}}</div>#}
+{#{% endfor %}#}
+
+{% for foo in aaa %}
+{#    {% with forloop.counter as v %}#}
+{#        <p>{{ v }}</p>#}
+{#    {% endwith %}#}
+{#    {{forloop.counter}}#}
+    <p>{{ foo.casename }}</p>
+    <p>{{ foo.url }}</p>
+    <p>{{ foo.data }}</p>
+    <p>{{ foo.method }}</p>
+    <p>{{ foo.type }}</p>
+{% endfor %}
+

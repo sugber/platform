@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>接口管理</title>
+</head>
+<body>
+    <form action="/interface" method="post">
+        <table>
+            <tr>
+              <th>ID</th>
+              <th>casename</th>
+              <th>url</th>
+              <th>data</th>
+              <th>method</th>
+              <th>type</th>
+            </tr>
+            {% for foo in aaa %}
+                <tr>
+                    <th>1</th>
+                    <th>{{ foo.casename }}</th>
+                    <th>{{ foo.url }}</th>
+                    <th>{{ foo.data }}</th>
+                    <th>{{ foo.method }}</th>
+                    <th>{{ foo.type }}</th>
+                </tr>
+            {% endfor %}
+            <tr>
+              <td><input type="text" name="ID"></td>
+              <td><input type="text" name="casename"></td>
+              <td><input type="text" name="url"></td>
+              <td><input type="text" name="data"></td>
+              <td><input type="text" name="method"></td>
+              <td><input type="text" name="type"></td><br>
+            </tr>
+            <tr>
+              <td><input type="submit" value="确定提交"></td>
+            </tr>
+        <table border="0">
+    </form>
+</body>
+</html>
+
+
+
+<li>nav</li>
